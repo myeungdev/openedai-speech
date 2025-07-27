@@ -223,7 +223,7 @@ async def generate_speech(request: GenerateSpeechRequest):
 
         speaker = voice_map.get('speaker', None)
 
-        tts_args = ["piper", "--model", str(piper_model), "--data-dir", "voices", "--download-dir", "voices", "--output-raw"]
+        tts_args = ["piper", "--model", str(piper_model), "--data-dir", "voices", "--output-raw"]
         if speaker:
             tts_args.extend(["--speaker", str(speaker)])
         if speed != 1.0:
